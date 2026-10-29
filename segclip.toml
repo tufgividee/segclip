@@ -1,0 +1,15 @@
+
+# Maximum payload characters per segment
+char_limit = 300
+
+[markers]
+start_sequence = "<|SEGCLIP_START|>"
+start_segment = "<|SEGCLIP_SEGMENT|>"
+end_segment = "<|SEGCLIP_END_SEGMENT|>"
+end_sequence = "<|SEGCLIP_END|>"
+
+[instructions]
+start_sequence = """
+The following segments form one ordered input.
+Retain and assemble them in order; wait until the end-of-sequence marker before responding.
+"""
